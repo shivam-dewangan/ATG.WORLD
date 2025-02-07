@@ -1,0 +1,133 @@
+.login-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-modal {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.left-side {
+  flex: 1;
+  padding-right: 2rem;
+  min-width: 300px;
+}
+
+.right-side {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.login-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sign-in-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.social-btn {
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.google {
+  color: #db4437;
+}
+
+.signup-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-modal {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .left-side {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    padding: 0.6rem;
+  }
+
+  .sign-in-btn {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .close-btn {
+    font-size: 1.2rem;
+  }
+
+  .login-modal {
+    width: 95%;
+  }
+
+  input {
+    padding: 0.5rem;
+  }
+
+  .sign-in-btn {
+    padding: 0.5rem;
+  }
+}

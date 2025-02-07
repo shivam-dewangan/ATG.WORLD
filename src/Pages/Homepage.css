@@ -1,0 +1,124 @@
+.mini-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  flex-wrap: wrap; /* Allow the header to wrap */
+}
+
+.mini-header-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+  gap: 15px; /* Add space between items */
+}
+
+.mini-header-list li {
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  color: black;
+  padding-bottom: 5px; /* Space for the hover underline */
+}
+
+.mini-header-list li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.mini-header-list li:hover::after {
+  width: 100%;
+}
+
+.mini-header-list li.active {
+  font-weight: bold;
+  color: black;
+}
+
+.button-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap; /* Wrap buttons on smaller screens */
+  margin-top: 10px; /* Space above the buttons */
+}
+
+.write-post-button,
+.leave-group-button {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.write-post-button:hover,
+.leave-group-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .mini-header {
+    padding: 15px;
+    flex-direction: column; /* Stack header content vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .mini-header-list {
+    flex-direction: column; /* Stack list items */
+    margin-top: 10px;
+  }
+
+  .mini-header-list li {
+    margin-bottom: 10px; /* Add more space between list items */
+    font-size: 14px; /* Reduce font size for better readability */
+  }
+
+  .button-section {
+    width: 100%; /* Make button section full width */
+    justify-content: center; /* Center buttons */
+    gap: 15px;
+  }
+
+  .write-post-button,
+  .leave-group-button {
+    width: 100%; /* Make buttons full-width */
+    text-align: center; /* Center text inside buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .mini-header {
+    padding: 10px;
+  }
+
+  .mini-header-list li {
+    font-size: 14px; /* Further reduce font size for small screens */
+  }
+
+  .write-post-button,
+  .leave-group-button {
+    font-size: 12px; /* Reduce button font size */
+    padding: 6px 10px; /* Adjust padding for smaller screens */
+  }
+}
